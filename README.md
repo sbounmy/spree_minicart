@@ -34,7 +34,7 @@ Make sure manifest is appened correctly, it should look like :
 Example
 =======
 
-Example goes here.
+![Spree Minicart](http://i41.tinypic.com/2n8zszs.png)
 
 Testing
 -------
