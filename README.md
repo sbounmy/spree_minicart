@@ -1,8 +1,35 @@
 SpreeMinicart
 =============
 
-Introduction goes here.
+Minicart feature extracted from http://501kfactory.com.
 
+```ruby
+rails g spree_minicart:install
+```
+
+Make sure manifest is appened correctly, it should look like :
+- app/assets/stylesheets/store/all.css :
+
+```css
+/*
+ *= require store/spree_core
+ *= require store/spree_auth
+ *= require store/spree_api
+ *= require store/spree_promo
+
+ *= require store/spree_minicart
+*/
+```
+
+- app/assets/javascripts/store/all.js :
+
+```javascript
+//= require store/spree_core
+//= require store/spree_auth
+//= require store/spree_api
+//= require store/spree_promo
+//= require store/spree_minicart
+```
 
 Example
 =======
