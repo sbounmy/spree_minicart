@@ -10,3 +10,4 @@ nbproject
 spec/dummy
 Gemfile.lock
 .rvmrc
+spree_minicart-*.gem
