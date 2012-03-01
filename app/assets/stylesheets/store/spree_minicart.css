@@ -1,0 +1,67 @@
+/*
+ *= require store/spree_core
+*/
+
+#progress {
+  display:none;
+  z-index: 99;
+  top: 0px;
+  text-align: center;
+  background: #00ADEE;
+  padding: 4px 10px;
+  color: white;
+  margin: 0 auto;
+  position: fixed;
+  left:50%;
+}
+
+nav #main-nav-bar li#link-to-cart #minicart a{
+  font-size: 12px
+}
+
+nav #main-nav-bar li#link-to-cart #minicart a.button{
+  font-size: 12px;
+  color: white !important;
+}
+
+ul#minicart-items {
+  margin: 0 10px;
+}
+
+
+ul#minicart-items li{
+  width: 90px;
+  position: relative;
+  float: left;
+  min-height: 180px;
+  padding: 5px 10px 0;
+  text-align: center;
+  text-transform: none;
+}
+
+#minicart {
+  background-color:aliceBlue;
+  z-index: 100;
+  position: absolute;
+  right: 16px;
+  padding: 10px;
+  border: 1px solid #DEDEDE;
+  float:right;
+  display: none;
+  width: 300px;
+}
+ul#minicart-items li img{
+  display: block;
+  margin-left: 20px;
+}
+
+#minicart div#minicart-details a.button.checkout{
+  float:right;
+}
+
+#link-to-cart span.amount {
+  display: none;
+}
+#minicart .minicart-actions {
+  display: none;
+}
