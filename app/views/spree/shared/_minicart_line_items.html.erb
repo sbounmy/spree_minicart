@@ -6,8 +6,8 @@
       <%= link_to image_tag(variant.images.first.attachment.url(:mini)), variant.product %>
     <% end %>
   </div>
-  <div data-hook="cart_item_description">
-    <div data-hook="cart_item_name">
+  <div data-hook="minicart_item_description">
+    <div data-hook="minicart_item_name">
       <span><%= link_to variant.product.name, product_path(variant.product) %></span>
       <span><%= "x#{line_item.quantity}" -%></span>
       <%= variant.options_text %>
@@ -17,15 +17,15 @@
         </span>
       <% end %>
     </div>
-    <div data-hook="cart_item_total">
+    <div data-hook="minicart_item_total">
       <%= number_to_currency(line_item.price * line_item.quantity) unless line_item.quantity.nil? %>
     </div>
   </div>
-  <div class='minicart-actions' data-hook="cart_item_actions">
-    <div data-hook="cart_item_quantity">
+  <div class='minicart-actions' data-hook="minicart_item_actions">
+    <div data-hook="minicart_item_quantity">
       <%= item_form.hidden_field :quantity, :min => 0, :class => "line_item_quantity" %>
     </div>
-    <div data-hook="cart_item_delete">
+    <div data-hook="minicart_item_delete">
       <%= link_to t("delete"), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
     </div>
   </div>

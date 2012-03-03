@@ -4,13 +4,13 @@
 
   <% if @order.line_items.empty? %>
 
-    <div data-hook="empty_cart">
+    <div data-hook="empty_minicart">
       <p><%= t(:your_cart_is_empty) %></p>
       <p><%= link_to t(:continue_shopping), products_path, :class => 'button continue' %></p>
     </div>
 
   <% else %>
-    <div data-hook="outside_cart_form">
+    <div data-hook="outside_minicart_form">
       <div id="minicart-details" data-hook="minicart_details" class="clearfix">
         <p>
           <span><%= t(:subtotal) %>: <span class="order-total"><%= order_subtotal(@order) %></span></span>
@@ -18,9 +18,9 @@
         </p>
       </div>
       <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-minicart'}, :remote => true do |order_form| %>
-        <div data-hook="inside_cart_form">
+        <div data-hook="inside_minicart_form">
 
-          <div data-hook="cart_items" class="clearfix">
+          <div data-hook="minicart_items" class="clearfix">
             <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
             <ul id='minicart-items' class="clearfix">
               <%= order_form.fields_for :line_items do |item_form| %>
@@ -29,7 +29,7 @@
             </ul>
           </div>
         <div id="minicart-footer" data-hook="minicart_footer">
-          <p><%= link_to t("view_shopping_cart"), cart_path, :class => 'button cart' %></p>
+          <p><%= link_to t("view_shopping_cart"), cart_path, :class => 'cart' %></p>
         </div>
         </div>
       <% end %>

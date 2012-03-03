@@ -30,6 +30,7 @@ rails g spree_minicart:install
 ```
 
 Make sure manifest is inserted correctly, it should look like :
+
 - app/assets/stylesheets/store/all.css :
 
 ```css
@@ -53,6 +54,14 @@ Make sure manifest is inserted correctly, it should look like :
 //= require store/spree_minicart
 ```
 
+Customization
+-------------
+
+The minicart markup should let you customize the way you want your minicart by using Deface or overriding _minicart.html.erb and _minicart_line_items.html.erb in your spree app.
+See [Spree Guide](http://guides.spreecommerce.com/view_customization.html) for more information.
+
+If you need to change the js response when you add / update the minicart, check out : orders/populate.js.erb and orders/update.js.erb.
+
 Example
 -------
 
@@ -64,6 +73,7 @@ Todo
 - Better html markup and HTML test for customization
 - Better css design
 - Can update minicart's item quantity
+- Add a pagination to the minicart items list using jcarousel
 
 Testing
 -------
