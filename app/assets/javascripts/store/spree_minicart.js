@@ -24,13 +24,13 @@
         $(this).hoverIntent
         ({
           over: function(){
-            $(this).find("[data-hook='cart_item_description']").hide()
-            $(this).find("[data-hook='cart_item_actions']").show()
+            $(this).find("[data-hook='minicart_item_description']").hide()
+            $(this).find("[data-hook='minicart_item_actions']").show()
           },
           timeout: 100, // number = milliseconds delay before onMouseOut
           out: function(){
-            $(this).find("[data-hook='cart_item_description']").show()
-            $(this).find("[data-hook='cart_item_actions']").hide()
+            $(this).find("[data-hook='minicart_item_description']").show()
+            $(this).find("[data-hook='minicart_item_actions']").hide()
           }
         });
         $(this).trigger(e);
@@ -39,7 +39,7 @@
 
 
     $('form#update-minicart a.delete').live('click', function(e){
-      $(this).parent().siblings('div[data-hook="cart_item_quantity"]').find("input.line_item_quantity").val(0);
+      $(this).parent().siblings('div[data-hook="minicart_item_quantity"]').find("input.line_item_quantity").val(0);
       $(this).parents('form').first().submit();
       e.preventDefault();
     });
