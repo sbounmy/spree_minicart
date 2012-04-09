@@ -1,7 +1,7 @@
 SpreeMinicart
 =============
 
-Minicart feature extracted from [http://www.501kfactory.com](http://www.501kfactory.com).
+Minicart feature extracted from [http://www.hallyustyle.com](http://www.hallyustyle.com).
 
 Your shopping cart is an incredibly important part of your e-commerce website.
 
