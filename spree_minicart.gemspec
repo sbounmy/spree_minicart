@@ -27,4 +27,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-rails',  '~> 2.7'
   s.add_development_dependency 'sqlite3'
 
+  if RUBY_VERSION < "1.9"
+    s.add_development_dependency "ruby-debug"
+  else
+    s.add_development_dependency "ruby-debug19"
+  end
+
 end
