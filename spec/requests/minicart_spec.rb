@@ -6,6 +6,7 @@ feature "minicart", :js => true do
   scenario "customer should be able to add and delete a product in the minicart" do
     visit spree.products_path
     click_link("ror mug")
+
     click_button "Add To Cart"
 
     within("#link-to-cart a") do
