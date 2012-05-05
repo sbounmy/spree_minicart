@@ -14,7 +14,11 @@ Installation
 To install Spree Minicart, just add the following to your Gemfile:
 
 ```ruby
-gem 'spree_minicart', '~> 0.0.3'
+# Spree 1.0.X
+gem 'spree_minicart', '~> 1.0.0'
+
+# Spree 1.1.X
+gem 'spree_size_chart', '~> 1.1.0'
 ```
 
 Now, bundle up with:
