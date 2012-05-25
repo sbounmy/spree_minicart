@@ -7,6 +7,10 @@ feature "minicart", :js => true do
     visit spree.products_path
     click_link("ror mug")
 
+    within("li#link-to-cart") do
+      page.should have_content("Cart: (Empty)")
+    end
+
     click_button "Add To Cart"
 
     within("#link-to-cart a") do
@@ -24,6 +28,10 @@ feature "minicart", :js => true do
       # manually sliding down the minicart actions, dont know why its not working
       page.execute_script '$("#minicart-items li div.minicart-actions").slideDown()'
       click_link "Delete"
+    end
+
+    within("li#link-to-cart") do
+      page.should have_content("Cart: (Empty)")
     end
 
     URI.parse(current_url).path.should =~ /products/
