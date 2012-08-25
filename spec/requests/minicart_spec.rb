@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 feature "minicart", :js => true do
-  background { @product = Factory(:product, :name => "ror mug", :price => 30) }
+  background { @product = FactoryGirl.create(:product, :name => "ror mug", :price => 30) }
 
   scenario "customer should be able to add and delete a product in the minicart" do
     visit spree.products_path
+
     click_link("ror mug")
 
     within("li#link-to-cart") do
@@ -90,5 +91,11 @@ feature "minicart", :js => true do
     click_link("ror mug")
     click_button "Add To Cart"
     URI.parse(current_url).path.should == "/cart"
+  end
+
+  scenario 'minicart should not create new order for every visitor', :js => false do
+    expect {
+      visit spree.products_path
+    }.to_not change(Spree::Order, :count)
   end
 end
