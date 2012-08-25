@@ -61,7 +61,9 @@ feature "minicart", :js => true do
 
     within("#minicart") do
       page.should have_content("ror mug")
-      page.should have_content("$30")
+      within("#minicart-details") do
+        page.should have_content("$60")
+      end
     end
 
     page.execute_script '$("#minicart-items li").trigger("mouseenter")'
