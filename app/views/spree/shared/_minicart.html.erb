@@ -12,7 +12,7 @@
     <div data-hook="outside_minicart_form">
       <div id="minicart-details" data-hook="minicart_details" class="clearfix">
         <p>
-          <span><%= t(:subtotal) %>: <span class="order-total"><%= order_subtotal(current_order.reload) %></span></span>
+          <span><%= t(:subtotal) %>: <span class="order-total"><%= order_subtotal(current_order) %></span></span>
           <%= link_to t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link' %>
         </p>
       </div>

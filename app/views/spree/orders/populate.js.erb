@@ -1,3 +1,4 @@
+<% current_order and current_order.update! # update to get correct total %>
 // Refresh minicart count
 $("#link-to-cart a").replaceWith('<%= escape_javascript link_to_cart %>')
 
