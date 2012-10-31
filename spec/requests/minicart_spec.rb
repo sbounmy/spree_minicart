@@ -118,17 +118,6 @@ feature "minicart", :js => true do
     click_button "Add To Cart"
 
     within("#link-to-cart a") do
-      page.should have_content("(2)")
-    end
-
-    within("#minicart") do
-      page.should have_content("ror mug")
-      page.should have_content('Insufficient stock available, only 1 remaining')
-    end
-
-    visit spree.products_path
-
-    within("#link-to-cart a") do
       page.should have_content("(1)")
     end
 

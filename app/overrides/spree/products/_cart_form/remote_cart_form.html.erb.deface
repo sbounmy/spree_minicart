@@ -1,0 +1,3 @@
+<!-- replace "code[erb-loud]:contains('form_for :order, :url => populate_orders_path do |f|')" -->
+
+<%= form_for :order, :url => populate_orders_url, :remote => true do |f| %>
