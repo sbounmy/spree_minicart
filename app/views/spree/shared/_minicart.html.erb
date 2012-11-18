@@ -23,7 +23,7 @@
             <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
             <ul id='minicart-items' class="clearfix">
               <%= order_form.fields_for :line_items do |item_form| %>
-                <%= render :partial => 'spree/shared/minicart_line_items', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } %>
+                <%= render :partial => 'spree/shared/minicart_line_items', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } if item_form.object.variant %>
               <% end %>
             </ul>
           </div>
