@@ -2,5 +2,8 @@ source 'http://rubygems.org'
 
 gemspec
 
-gem 'spree_core', :git => 'git://github.com/spree/spree.git', :branch => '1-2-stable'
-gem 'spree_sample', :git => 'git://github.com/spree/spree.git', :branch => '1-2-stable'
+if ENV['USE_LOCAL_SPREE']
+  gem 'spree_core', :path => '~/code/spree'
+else
+  gem 'spree_core', :git => 'git://github.com/spree/spree.git', :branch => '1-3-stable'
+end
