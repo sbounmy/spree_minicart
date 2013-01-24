@@ -16,7 +16,7 @@
     $("#link-to-cart").hoverIntent( config )
 
     // hoverintent items created by js http://rndnext.blogspot.com/2009/02/jquery-live-and-plugins.html
-    $("ul#minicart-items li").live('mouseover', function(e)
+    $(document).on('mouseover', "ul#minicart-items li", function(e)
     {
       if (!$(this).data('init'))
       {
@@ -38,17 +38,17 @@
     });
 
 
-    $('form#update-minicart a.delete').live('click', function(e){
+    $(document).on('click', 'form#update-minicart a.delete', function(e){
       $(this).parent().siblings('div[data-hook="minicart_item_quantity"]').find("input.line_item_quantity").val(0);
       $(this).parents('form').first().submit();
       e.preventDefault();
     });
 
-    $("form[data-remote]").live("ajax:beforeSend", function(){
+    $(document).on("ajax:beforeSend", "form[data-remote]", function(){
       $("#progress").slideDown();
     })
 
-    $("form[data-remote]").live("ajax:complete", function(){
+    $(document).on("ajax:complete", "form[data-remote]", function(){
       $("#progress").slideUp();
     })
   });
