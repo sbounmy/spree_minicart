@@ -13,7 +13,7 @@
       <%= variant.options_text %>
       <% if current_order.insufficient_stock_lines.include? line_item %>
         <span class="out-of-stock">
-          <%= variant.in_stock? ? t(:insufficient_stock, :on_hand => variant.on_hand) : t(:out_of_stock) %><br />
+          <%= variant.in_stock? ? Spree.t(:insufficient_stock, :on_hand => variant.on_hand) : Spree.t(:out_of_stock) %><br />
         </span>
       <% end %>
     </div>
@@ -26,7 +26,7 @@
       <%= item_form.hidden_field :quantity, :min => 0, :class => "line_item_quantity" %>
     </div>
     <div data-hook="minicart_item_delete">
-      <%= link_to t("delete"), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+      <%= link_to Spree.t(:delete), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
     </div>
   </div>
 </li>

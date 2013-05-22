@@ -1,5 +1,5 @@
 /*
- *= require store/spree_core
+ *= require store/spree_frontend
 */
 
 #progress {
@@ -15,11 +15,11 @@
   left:50%;
 }
 
-nav #main-nav-bar li#link-to-cart #minicart a{
+nav #main-nav-bar li#link-to-cart #minicart a {
   font-size: 12px
 }
 
-nav #main-nav-bar li#link-to-cart #minicart a.button{
+nav #main-nav-bar li#link-to-cart #minicart a.button {
   font-size: 12px;
   color: white !important;
 }
