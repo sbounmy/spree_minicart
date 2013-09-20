@@ -8,7 +8,7 @@
   </div>
   <div data-hook="minicart_item_description">
     <div data-hook="minicart_item_name">
-      <span><%= link_to variant.product.name, product_path(variant.product) %></span>
+      <span><%= link_to variant.product.name, spree.product_path(variant.product) %></span>
       <span><%= "x#{line_item.quantity}" -%></span>
       <%= variant.options_text %>
       <% if current_order.insufficient_stock_lines.include? line_item %>
