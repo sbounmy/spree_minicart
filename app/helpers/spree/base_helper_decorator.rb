@@ -14,7 +14,7 @@ module Spree
         css_class = 'full'
       end
 
-      link_to text, cart_path, :class => css_class
+      link_to text, spree.cart_path, :class => css_class
     end
 
   end
