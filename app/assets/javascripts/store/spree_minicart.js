@@ -9,7 +9,6 @@
       timeout: 250, // number = milliseconds delay before onMouseOut
       out: function(){
         $("#minicart").slideUp();
-        arg.kkkenfd();
       },
       selector: "#link-to-cart"
     };
