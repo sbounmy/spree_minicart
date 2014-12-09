@@ -9,10 +9,12 @@
       timeout: 250, // number = milliseconds delay before onMouseOut
       out: function(){
         $("#minicart").slideUp();
-      }
+        arg.kkkenfd();
+      },
+      selector: "#link-to-cart"
     };
 
-    $("#link-to-cart").hoverIntent( config )
+    $(document).hoverIntent( config );
 
     // hoverintent items created by js http://rndnext.blogspot.com/2009/02/jquery-live-and-plugins.html
     $(document).on('mouseover', "ul#minicart-items li", function(e)
