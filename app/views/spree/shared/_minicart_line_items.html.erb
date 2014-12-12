@@ -18,7 +18,7 @@
       <% end %>
     </div>
     <div data-hook="minicart_item_total">
-      <%= number_to_currency(line_item.price * line_item.quantity) unless line_item.quantity.nil? %>
+      <%= Spree::Money.new(line_item.price * line_item.quantity, { currency: current_currency }).to_html unless line_item.quantity.nil? %>
     </div>
   </div>
   <div class='minicart-actions' data-hook="minicart_item_actions">
